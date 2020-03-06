@@ -1,4 +1,4 @@
-def remove_dups(arr)
+def my_uniq(arr)
 end
 
 def two_sum(arr)
