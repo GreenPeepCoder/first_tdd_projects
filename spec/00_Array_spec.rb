@@ -1,7 +1,7 @@
 require 'tdd_ex'
 require 'rspec'
 
-describe '#remove_dups' do
+describe '#my_uniq' do
 end
 
 describe '#two_sum' do
