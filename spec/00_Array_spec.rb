@@ -63,7 +63,7 @@ describe '#stock_picker' do
     end
 
     it "finds a better pair after an inferior pair" do
-        expect(stock_picker([3,2,5,0,6])).to eq([2, 5])
+        expect(stock_picker([3,2,5,0,6])).to eq([3, 4])
     end
 
     it "does not buy stocks in a crash" do
