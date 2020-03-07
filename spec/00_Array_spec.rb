@@ -41,9 +41,21 @@ describe '#two_sum' do
     end
 end
 
-# describe '#my_transpose' do
-#     it "transposes a matrix"
-# end
+describe '#my_transpose' do
+    it "transposes a matrix" do 
+        matrix = [
+            [1, 2, 3],
+            [4, 5, 6],
+            [7, 8, 9],
+        ]
+
+        expect(my_transpose(matrix)).to eq([
+            [1, 4, 7],
+            [2, 5, 8],
+            [3, 6, 9],
+        ])
+    end
+end
 
 # describe '#stock_picker' do
 #     it "finds a simple pair"
