@@ -23,13 +23,28 @@ describe "my_uniq" do
     end
 end
 
-# describe '#two_sum' do
-# end
+describe '#two_sum' do
+    let(:array) { [-5, -3, 1, 3]}
+    let(:one_zero) { [3, 0, 4]}
+    let(:two_zero) { [3, 0, 4, 0]}
 
-# describe '#my_transpose' do
-# end
+    it "finds a zero-sum pair"
 
-# describe '#stock_picker' do
-# end
+    it "is not confused by a single zero"
+
+    it "handles two zeros"
+end
+
+describe '#my_transpose' do
+    it "transposes a matrix"
+end
+
+describe '#stock_picker' do
+    it "finds a simple pair"
+
+    it "finds a better pair after an inferior pair"
+
+    it "does not buy stocks in a crash"
+end
 
 
