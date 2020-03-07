@@ -28,23 +28,25 @@ describe '#two_sum' do
     let(:one_zero) { [3, 0, 4]}
     let(:two_zero) { [3, 0, 4, 0]}
 
-    it "finds a zero-sum pair"
+    it "finds a zero-sum pair" do
+        expect(two_sum(array)).to eq([[1, 3]])
+    end
 
     it "is not confused by a single zero"
 
     it "handles two zeros"
 end
 
-describe '#my_transpose' do
-    it "transposes a matrix"
-end
+# describe '#my_transpose' do
+#     it "transposes a matrix"
+# end
 
-describe '#stock_picker' do
-    it "finds a simple pair"
+# describe '#stock_picker' do
+#     it "finds a simple pair"
 
-    it "finds a better pair after an inferior pair"
+#     it "finds a better pair after an inferior pair"
 
-    it "does not buy stocks in a crash"
-end
+#     it "does not buy stocks in a crash"
+# end
 
 
