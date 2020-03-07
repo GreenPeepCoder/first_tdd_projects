@@ -32,9 +32,13 @@ describe '#two_sum' do
         expect(two_sum(array)).to eq([[1, 3]])
     end
 
-    it "is not confused by a single zero"
-
-    it "handles two zeros"
+    it "is not confused by a single zero" do
+        expect(two_sum(one_zero)).to eq([])
+    end
+    
+    it "handles two zeros" do
+        expect(two_sum(two_zero)).to eq([[1, 3]])
+    end
 end
 
 # describe '#my_transpose' do
