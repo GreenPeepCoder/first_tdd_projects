@@ -57,12 +57,18 @@ describe '#my_transpose' do
     end
 end
 
-# describe '#stock_picker' do
-#     it "finds a simple pair"
+describe '#stock_picker' do
+    it "finds a simple pair" do
+        expect(stock_picker([3,1,0,4,6,9])).to eq([2,5])
+    end
 
-#     it "finds a better pair after an inferior pair"
+    it "finds a better pair after an inferior pair" do
+        expect(stock_picker([3,2,5,0,6])).to eq([2, 5])
+    end
 
-#     it "does not buy stocks in a crash"
-# end
+    it "does not buy stocks in a crash" do
+        expect(stock_picker([5,4,3,2,1])).to be_nil
+    end
+end
 
 
