@@ -17,6 +17,15 @@ def two_sum(arr)
 end
 
 def my_transpose(rows)
+    dim = rows.first.count
+    cols = Array.new(dim) {Array.new(dim)}
+
+    dim.times do |i|
+        dim.times do |j|
+            cols[j][i] = rows[i][j]
+        end
+    end
+    cols
 end
 
 def stock_picker(prices)
