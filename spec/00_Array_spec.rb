@@ -11,19 +11,25 @@ describe "my_uniq" do
     end
 
     it "only contains items from the original array" do
+        uniqued_array.each do |ele|
+            expect(array).to include(ele) 
+        end
     end
 
     it "does not modify original array" do
+        expect {
+            my_uniq(array)
+        }.to_not change{array}
     end
 end
 
-describe '#two_sum' do
-end
+# describe '#two_sum' do
+# end
 
-describe '#my_transpose' do
-end
+# describe '#my_transpose' do
+# end
 
-describe '#stock_picker' do
-end
+# describe '#stock_picker' do
+# end
 
 
