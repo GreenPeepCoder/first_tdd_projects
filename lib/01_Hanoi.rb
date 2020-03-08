@@ -25,6 +25,10 @@ class TowersOfHanoiGame
         @stacks[to_tower] << @stacks[from_tower].pop
     end
 
+    def won?
+        @stacks[0].empty? && @stacks[1..2].any?(&:empty?)
+    end
+
     private 
     attr_reader :stacks
 end

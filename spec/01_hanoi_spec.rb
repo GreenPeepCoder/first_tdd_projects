@@ -8,7 +8,11 @@ describe TowersOfHanoiGame do
             expect(towers.render).to eq("Tower 0: 3 2 1\nTower 1: \nTower 2: \n")
         end
 
-        it "prints shorter stacks"
+        it "prints shorter stacks" do
+            towers.move(0,2)
+            towers.move(0,1)
+            expect(towers.render).to eq("Tower 0: 3\nTower 1: 2\nTower 2: 1\n")
+        end
     end 
 
     describe "move" do
@@ -39,8 +43,30 @@ describe TowersOfHanoiGame do
             expect(towers).not_to be_won
         end
 
-        it "is won when all disks are moved to tower 1"
+        it "is won when all disks are moved to tower 1" do
+            # these moves will lead to a won game
+            towers.move(0, 1)
+            towers.move(0, 2)
+            towers.move(1, 2)
+            towers.move(0, 1)
+            towers.move(2, 0)
+            towers.move(2, 1)
+            towers.move(0, 1)
 
-        it "is won when all disks are moved to tower 2"
+            expect(towers).to be_won
+        end
+        
+        it "is won when all disks are moved to tower 2" do
+            # these moves will lead to a won game
+            towers.move(0, 2)
+            towers.move(0, 1)
+            towers.move(2, 1)
+            towers.move(0, 2)
+            towers.move(1, 0)
+            towers.move(1, 2)
+            towers.move(0, 2)
+    
+            expect(towers).to be_won
+        end
     end
 end
